@@ -1,0 +1,19 @@
+<div>
+  <mat-card *ngFor="let selectedCharacter of characters" class="mat-card-container">
+    <mat-card-title class="heading">
+      {{selectedCharacter.name}}
+    </mat-card-title>
+
+    <mat-card-content>
+      Gender: {{selectedCharacter.gender}}
+    </mat-card-content>
+
+    <mat-card-content>
+      Height: {{selectedCharacter.height}}cm
+    </mat-card-content>
+
+    <mat-card-content>
+      Mass: {{selectedCharacter.mass}}kg
+    </mat-card-content>
+  </mat-card>
+</div>
