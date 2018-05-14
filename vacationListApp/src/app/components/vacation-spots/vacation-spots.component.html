@@ -1,0 +1,9 @@
+<div>
+    <mat-card *ngFor="let vacationSpot of vacationSpots" class="mat-card-container">
+        <mat-card-title class="heading">{{vacationSpot.locationName}}</mat-card-title>
+        <img mat-card-image [src]="vacationSpot.image" class="image">
+        <mat-card-content *ngIf="vacationSpot.averageTemp > 78">Average Temperature: {{vacationSpot.averageTemp}}</mat-card-content>
+        <mat-card-content>Average Water Temperature: {{vacationSpot.averageWaterTemp}}</mat-card-content>
+        <mat-card-content>{{vacationSpot.description}}</mat-card-content>
+    </mat-card>
+</div>

@@ -1,0 +1,15 @@
+.image {
+    object-fit: fit;
+    width: 400px;
+    height: 200px;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+.mat-card-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 450px;
+    justify-content: center;
+    margin: 20px auto;
+}
