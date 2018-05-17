@@ -1,0 +1,14 @@
+<div class="main">
+  <h1 class="bottomSpacing">Users</h1>
+
+  <button (click)="showAdmins()">Show Admins</button>
+  <button (click)="showUsers()">Show Users</button>
+
+  <ul *ngFor="let user of filteredUsers">
+    <div class="bottomSpacing">
+      <h4>Name: {{user.first_name}} {{user.last_name}}</h4>
+      <p>Email: {{user.email}}</p>
+      <p>Admin: {{user.admin}}</p>
+    </div>
+  </ul>
+</div>
