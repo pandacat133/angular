@@ -15,6 +15,7 @@ export class CharacterListComponent implements OnInit {
     filteredCharacters: Character[];
     characterFC = new FormControl('');
     hideDetails = false;
+    today = new Date();
 
     constructor(
         private swAPIDataService: SwAPIDataService
@@ -45,7 +46,8 @@ export class CharacterListComponent implements OnInit {
         this.hideDetails = !this.hideDetails;
     }
 
-    logSomething(characterName: string) {
-      console.log(characterName);
+    logSomething(character: Character) {
+      console.log(character.name);
+      console.log(character.hair_color);
     }
 }

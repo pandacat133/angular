@@ -21,7 +21,8 @@ import { SidenavContentComponent } from './components/sidenav-content/sidenav-co
         MaterialModule,
         BrowserAnimationsModule,
         HttpClientModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        FormsModule
     ],
     providers: [],
     bootstrap: [AppComponent]

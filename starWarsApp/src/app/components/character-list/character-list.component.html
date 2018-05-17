@@ -5,10 +5,13 @@
 
     <button color="accent" mat-raised-button (click)="hideDetailsFn()">Hide Details</button>
 
-    <mat-list *ngFor="let filteredCharacter of filteredCharacters">
+    <mat-list *ngFor="let character of filteredCharacters">
         <mat-list-item>
-          <div (click)="logSomething(filteredCharacter.name)">{{filteredCharacter.name}}</div>&nbsp;
-          <div *ngIf="!hideDetails">Height: {{filteredCharacter.height}}cm</div>
+          <div (click)="logSomething(character)">{{character.name}}</div>&nbsp;
+          <input [(ngModel)]="character.hair_color">&nbsp;
+          <div>{{character.hair_color}}</div>&nbsp;
+          <div *ngIf="!hideDetails">Height: {{character.height}}cm</div>
+          <div *ngIf="!hideDetails">Today: {{today | date}}</div>
         </mat-list-item>
     </mat-list>
 </div>
