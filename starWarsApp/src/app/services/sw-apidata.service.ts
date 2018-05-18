@@ -12,7 +12,8 @@ export class SwAPIDataService {
     ) { }
 
     getCharacters(): Observable<any> {
-        return this.http.get('https://swapi.co/api/people/')
+        // return this.http.get('https://swapi.co/api/people/')
+      return this.http.get('assets/api/characters.json');
     }
 
     getFilmName(url: string): Observable<any> {

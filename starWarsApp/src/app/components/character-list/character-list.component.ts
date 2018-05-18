@@ -12,10 +12,10 @@ import { Character } from '../../domains/character';
 })
 export class CharacterListComponent implements OnInit {
     characters: Character[];
+    // Use filterCharacters for template binding in sidenav
     filteredCharacters: Character[];
     characterFC = new FormControl('');
     hideDetails = false;
-    today = new Date();
 
     constructor(
         private swAPIDataService: SwAPIDataService
@@ -23,21 +23,18 @@ export class CharacterListComponent implements OnInit {
 
     ngOnInit() {
         this.swAPIDataService.getCharacters().subscribe(characters => {
-            console.log(characters.results);
-            this.characters = characters.results;
-
-            // Use filterCharacters for template binding in sidenav
-            this.filteredCharacters = characters.results;
+            this.characters = characters;
+            this.filteredCharacters = characters;
         });
 
         this.characterFC.valueChanges.subscribe(value => {
             if (!value) {
                 this.filteredCharacters = this.characters;
                 return;
-            };
+            }
 
             this.filteredCharacters = this.characters.filter(character => {
-                return character.name.includes(value);
+                return character.name.toLowerCase().indexOf(value.toLowerCase()) !== -1;
             });
         });
     }
@@ -46,8 +43,9 @@ export class CharacterListComponent implements OnInit {
         this.hideDetails = !this.hideDetails;
     }
 
-    logSomething(character: Character) {
-      console.log(character.name);
-      console.log(character.hair_color);
-    }
+  logSomething(char: Character) {
+    console.log('character: ' + char.name);
+    console.log('hair color: ' + char.hair_color);
+  }
+
 }
