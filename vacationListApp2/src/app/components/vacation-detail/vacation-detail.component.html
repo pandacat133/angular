@@ -1,0 +1,21 @@
+<mat-card *ngIf="vacationDetail" class="vacation-detail-container">
+  <h2>
+    {{vacationDetail.locationName}}
+  </h2>
+
+  <img [src]="vacationDetail.image">
+
+  <vacation-rating [rating]="vacationDetail.rating"></vacation-rating>
+
+  <p>
+    Average Temp: {{vacationDetail.averageTemp}}
+  </p>
+
+  <p>
+    Average Water Temp: {{vacationDetail.averageWaterTemp}}
+  </p>
+
+  <p>
+    Description: {{vacationDetail.description}}
+  </p>
+</mat-card>

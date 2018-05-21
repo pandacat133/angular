@@ -1,0 +1,21 @@
+<mat-card *ngIf="character">
+  <h2>
+    {{character.name}}
+  </h2>
+
+  <img [src]="character.img" class="character-image">
+
+  <force-strength [forceStrength]="character.force"></force-strength>
+
+  <p>
+    Hair Color: {{character.hair_color}}
+  </p>
+
+  <p>
+    Height: {{character.height}}cm
+  </p>
+
+  <p>
+    Gender: {{character.gender}}
+  </p>
+</mat-card>

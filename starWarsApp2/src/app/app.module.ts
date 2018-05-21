@@ -8,15 +8,16 @@ import { AppComponent } from './app.component';
 import { MaterialModule } from './material.module';
 
 import { CharacterListComponent } from './components/character-list/character-list.component';
-import { SidenavContentComponent } from './components/sidenav-content/sidenav-content.component';
-import { CharacterListFilterPipe } from './components/character-list/character-list-filter.pipe';
+import { CharacterService } from './services/character.service';
+import { ForceStrengthComponent } from './components/force-strength/force-strength.component';
+import { CharacterDetailComponent } from './components/character-detail/character-detail.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         CharacterListComponent,
-        SidenavContentComponent,
-        CharacterListFilterPipe
+        ForceStrengthComponent,
+        CharacterDetailComponent
     ],
     imports: [
         BrowserModule,
@@ -26,7 +27,9 @@ import { CharacterListFilterPipe } from './components/character-list/character-l
         ReactiveFormsModule,
         FormsModule
     ],
-    providers: [],
+    providers: [
+        CharacterService
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
