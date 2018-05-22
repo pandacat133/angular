@@ -20,10 +20,12 @@ export class ForceStrengthComponent implements OnInit {
             this.forceArr.push(i.toString());
         }
     }
+
     forceArr = [];
 
     constructor() { }
 
     ngOnInit() {
     }
+
 }

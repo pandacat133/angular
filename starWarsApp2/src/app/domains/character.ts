@@ -19,4 +19,3 @@ export interface Character {
     edited: string;
     url: string;
 }
-

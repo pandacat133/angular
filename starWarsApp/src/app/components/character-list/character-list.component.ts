@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
-import { SwAPIDataService } from '../../services/sw-apidata.service';
+import { CharacterService } from '../../services/character.service';
 
 import { Character } from '../../domains/character';
 
 @Component({
-    selector: 'app-character-list',
+    selector: 'character-list',
     templateUrl: './character-list.component.html',
     styleUrls: ['./character-list.component.css']
 })
@@ -16,14 +16,13 @@ export class CharacterListComponent implements OnInit {
     filteredCharacters: Character[];
     characterFC = new FormControl('');
     hideDetails = false;
-    filterBy: string;
 
     constructor(
-        private swAPIDataService: SwAPIDataService
+        private characterService: CharacterService
     ) { }
 
     ngOnInit() {
-        this.swAPIDataService.getCharacters().subscribe(characters => {
+        this.characterService.getCharacters().subscribe(characters => {
             this.characters = characters;
             this.filteredCharacters = characters;
         });
@@ -44,8 +43,13 @@ export class CharacterListComponent implements OnInit {
         this.hideDetails = !this.hideDetails;
     }
 
-  logSomething(char: Character) {
-    console.log('character: ' + char.name);
-    console.log('hair color: ' + char.hair_color);
-  }
+    setActiveCharacter(activeCharacter: Character) {
+        this.characterService.activeCharacter.next(activeCharacter);
+    }
+
+    logSomething(char: Character) {
+        console.log('character: ' + char.name);
+        console.log('hair color: ' + char.hair_color);
+    }
+
 }

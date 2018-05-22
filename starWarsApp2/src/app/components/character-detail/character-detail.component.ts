@@ -17,5 +17,4 @@ export class CharacterDetailComponent implements OnInit {
       this.character = getCharacters;
     });
   }
-
 }

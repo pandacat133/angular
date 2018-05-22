@@ -1,10 +1,13 @@
-<mat-toolbar color="primary">Star Wars App</mat-toolbar>
+<mat-toolbar color="primary">
+  <button mat-button [routerLink]="['/home']">
+    <span class="menuItem" >Star Wars App</span>
+  </button>
+  <button mat-button [routerLink]="['/home']">
+    <span class="menuItem">Home</span>
+  </button>
+  <button mat-button [routerLink]="['/characters']">
+    <span class="menuItem">Characters</span>
+  </button>
+</mat-toolbar>
+<router-outlet></router-outlet>
 
-<mat-sidenav-container class="sidenav-container" autosize>
-    <mat-sidenav mode="side" opened>
-        <app-character-list></app-character-list>
-    </mat-sidenav>
-    <mat-sidenav-content class="sidenav-content">
-        <app-sidenav-content></app-sidenav-content>
-    </mat-sidenav-content>
-</mat-sidenav-container>

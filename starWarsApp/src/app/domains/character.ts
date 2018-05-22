@@ -1,7 +1,7 @@
 export interface Character {
     name: string;
-    height: number;
-    mass: number;
+    height: string;
+    mass: string;
     hair_color: string;
     eye_color: string;
     skin_color: string;
@@ -10,13 +10,13 @@ export interface Character {
     force: number;
     avatar: string;
     img: string;
-    homeworld?: string;
-    films?: string[];
-    species?: string[];
-    vehicles?: string[];
-    starships?: string[];
-    created?: string;
-    edited?: string;
-    url?: string;
+    homeworld: string;
+    films: string[];
+    species: string[];
+    vehicles: string[];
+    starships: string[];
+    created: string;
+    edited: string;
+    url: string;
 }
 

@@ -46,10 +46,4 @@ export class CharacterListComponent implements OnInit {
     setActiveCharacter(activeCharacter: Character) {
         this.characterService.activeCharacter.next(activeCharacter);
     }
-
-    logSomething(char: Character) {
-        console.log('character: ' + char.name);
-        console.log('hair color: ' + char.hair_color);
-    }
-
 }
