@@ -29,9 +29,6 @@ export class DavesToyProblemComponent implements OnInit {
         console.log(reversedWord);
 
         // #2 Console log the 1st, 3rd, 5th, 7th, etc letters after they have been combined into a single string
-        let lettersArray = reversedWord.split("");
-        for(let i = 0; i <= lettersArray.length; i+2) {
-        }
 
         // #3 Console log all multiples of 5, 7, and 8.
 
