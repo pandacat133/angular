@@ -1,0 +1,21 @@
+1. Generate 3 components called - "people", "planets", "starships"
+
+2. Generate 1 service called to be shared by all three components
+
+3. Follow the "Setup" section from "https://angular.io/guide/http" to import the httpClient
+
+4. Set up a router to route to all three components
+
+5. Create a header in the "app.component.html" file with router links to all three components
+
+*** If short on time, only create needed methods/method calls for the planets component ***
+5. In the service created previously, create three seperate methods. One to make an API call
+    to get all people, one to get all planets, one to get all star ships. Refer to "https://swapi.co/" 
+    for API end point.
+
+6. Inject the service into each component.
+
+7. In the ngOnit of each component, call the associated method from the service to return data needed 
+    for that component, store that data in a variable.
+
+8. Display as much data as wanted in each components HTML file. 
