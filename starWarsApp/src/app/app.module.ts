@@ -23,12 +23,12 @@ import { HomeComponent } from './components/home/home.component';
         HomeComponent
     ],
     imports: [
-        BrowserModule,
         MaterialModule,
+        BrowserModule,
+        FormsModule,
+        ReactiveFormsModule,
         BrowserAnimationsModule,
         HttpClientModule,
-        ReactiveFormsModule,
-        FormsModule,
         RouterModule.forRoot([
           {path: 'characters', component: CharacterListComponent},
           {path: 'character/:id', component: CharacterDetailComponent},

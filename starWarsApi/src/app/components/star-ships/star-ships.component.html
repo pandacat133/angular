@@ -1,3 +1,7 @@
-<p>
-  star-ships works!
-</p>
+<mat-card *ngFor="let myStarShips of starShipData">
+  <h2>{{myStarShips.name}}</h2>
+  <p>Model: {{myStarShips.model}}</p>
+  <p>Manufacturer: {{myStarShips.manufacturer}}</p>
+  <p>Crew: {{myStarShips.crew}}</p>
+  <p>Passengers: {{myStarShips.passengers}}</p>
+</mat-card>

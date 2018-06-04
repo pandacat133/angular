@@ -14,8 +14,7 @@
   <mat-list>
     <mat-list-item *ngFor="let character of filteredCharacters"
                    class="character"
-                   (click)="setActiveCharacter(character)"
-                    [routerLink]="['/character', character.id]">
+                   [routerLink]="['/character', character.id]">
       <img mat-list-avatar [src]="character.avatar" [title]="character.name | lowercase"/>
       <h3 mat-line>{{character.name | uppercase}}</h3>
       <div mat-line *ngIf="!hideDetails" class="height">
@@ -24,6 +23,4 @@
       </div>
     </mat-list-item>
   </mat-list>
-
-
 </div>

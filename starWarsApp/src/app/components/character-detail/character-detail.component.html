@@ -4,5 +4,10 @@
     <p>Hair Color: {{activeCharacter.hair_color}}</p>
     <p>Skin Color: {{activeCharacter.skin_color}}</p>
     <p>Mass: {{activeCharacter.mass}}</p>
-    <force-strength [forceStrength]="activeCharacter.force"></force-strength>  
+    <force-strength [forceStrength]="activeCharacter.force"></force-strength>
+    <mat-card-actions style="text-align: right">
+      <button mat-button (click)="back()">
+        <mat-icon>chevron_left</mat-icon> BACK
+      </button>
+    </mat-card-actions>
 </mat-card>

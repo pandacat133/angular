@@ -1,3 +1,7 @@
-<p>
-  people works!
-</p>
+<mat-card *ngFor="let myPeople of peopleData">
+  <h2>{{myPeople.name}}</h2>
+  <p>Hair Color: {{myPeople.hair_color}}</p>
+  <p>Skin Color: {{myPeople.skin_color}}</p>
+  <p>Mass: {{myPeople.mass}}kg</p>
+  <p>Gender: {{myPeople.gender}}</p>
+</mat-card>

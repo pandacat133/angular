@@ -10,9 +10,9 @@ import { Character } from '../../domains/character';
     templateUrl: './character-list.component.html',
     styleUrls: ['./character-list.component.css']
 })
+
 export class CharacterListComponent implements OnInit {
     characters: Character[];
-    // Use filterCharacters for template binding in sidenav
     filteredCharacters: Character[];
     characterFC = new FormControl('');
     hideDetails = false;
@@ -46,10 +46,4 @@ export class CharacterListComponent implements OnInit {
     setActiveCharacter(activeCharacter: Character) {
         this.characterService.activeCharacter.next(activeCharacter);
     }
-
-    logSomething(char: Character) {
-        console.log('character: ' + char.name);
-        console.log('hair color: ' + char.hair_color);
-    }
-
 }

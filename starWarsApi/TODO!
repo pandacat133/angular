@@ -9,13 +9,13 @@
 5. Create a header in the "app.component.html" file with router links to all three components
 
 *** If short on time, only create needed methods/method calls for the planets component ***
-5. In the service created previously, create three seperate methods. One to make an API call
-    to get all people, one to get all planets, one to get all star ships. Refer to "https://swapi.co/" 
+5. In the service created previously, create three separate methods. One to make an API call
+    to get all people, one to get all planets, one to get all star ships. Refer to "https://swapi.co/"
     for API end point.
 
 6. Inject the service into each component.
 
-7. In the ngOnit of each component, call the associated method from the service to return data needed 
+7. In the ngOnit of each component, call the associated method from the service to return data needed
     for that component, store that data in a variable.
 
-8. Display as much data as wanted in each components HTML file. 
+8. Display as much data as wanted in each components HTML file.

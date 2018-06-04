@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute, Router} from '@angular/router';
 
 import { CharacterService } from '../../services/character.service';
-
 import { Character } from '../../domains/character';
 
 @Component({
@@ -13,13 +13,18 @@ export class CharacterDetailComponent implements OnInit {
     activeCharacter: Character;
 
     constructor(
-        private characterService: CharacterService
-    ) { }
+      private characterService: CharacterService,
+      private activatedRoute: ActivatedRoute,
+      private router: Router
+    ) {}
 
     ngOnInit() {
-        this.characterService.activeCharacter.subscribe(activeCharacter => {
-            this.activeCharacter = activeCharacter;
-        });
+        this.characterService
+          .getCharacter(this.activatedRoute.snapshot.params['id'])
+          .subscribe(character => this.activeCharacter = character);
     }
 
+    back() {
+      this.router.navigate(['/characters']);
+    }
 }
