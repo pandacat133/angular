@@ -1,3 +1,15 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<app-daves-toy-problem></app-daves-toy-problem>
+<!-- <app-daves-toy-problem></app-daves-toy-problem> -->
+<mat-toolbar color="primary">
+    <button mat-button>
+        <span class="menu-item" [routerLink]="['/toy-problems']">Toy Problems</span>
+    </button>
+    <button mat-button [routerLink]="['/animation-sandbox']">
+        <span class="menu-item">Animations Sandbox</span>
+    </button>
+</mat-toolbar>
+
+<div>
+    <router-outlet></router-outlet>
+</div>
 

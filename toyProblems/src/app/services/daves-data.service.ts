@@ -8,20 +8,81 @@ export class DavesDataService {
     jokes: Joke[]
     alphabet: string[];
     numbers: number[];
+    shoppingList: {id: string, productId: string, volume: number}[];
+    products: {id: string, price: number, img: string}[];
 
     constructor() { 
         this.alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 
         this.numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50];
+
+        this.shoppingList = [
+            {
+                id: '1',
+                productId: '223ab',
+                volume: 12
+            },
+            {
+                id: '2',
+                productId: '213az',
+                volume: 7
+            },
+            {
+                id: '3',
+                productId: '2fg4a',
+                volume: 3
+            },
+            {
+                id: '4',
+                productId: '27ubb',
+                volume: 22
+            },
+            {
+                id: '5',
+                productId: '256vb',
+                volume: 1
+            },
+            {
+                id: '6',
+                productId: '2112t',
+                volume: 13
+            },
+        ];
+
+        this.products = [
+            {
+                id: '213az',
+                price: 7.78,
+                img: 'https://images-na.ssl-images-amazon.com/images/I/71gI-IUNUkL._SL1500_.jpg'
+            },
+            {
+                id: '223ab',
+                price: 12.43,
+                img: 'https://upload.wikimedia.org/wikipedia/commons/b/bb/Cherry_Stella444.jpg'
+            },
+            {
+                id: '27ubb',
+                price: 22.96,
+                img: 'https://upload.wikimedia.org/wikipedia/commons/6/69/Raspberries05.jpg'
+            },
+            {
+                id: '2112t',
+                price: 13.47,
+                img: 'https://www.vaporfi.com/media/catalog/product/cache/9/thumbnail/600x600/9df78eab33525d08d6e5fb8d27136e95/v/z/vz_eliquid_juicy_red_apple.jpg'
+            },
+            {
+                id: '256vb',
+                price: 1.11,
+                img: 'https://www.organicfacts.net/wp-content/uploads/kiwifruit.jpg'
+            },
+            {
+                id: '2fg4a',
+                price: 3.32,
+                img: 'https://cdn1.medicalnewstoday.com/content/images/articles/271/271285/three-strawberries.jpg'
+            },
+        ];
         
         this.jokes = [
-            {
-            id: 1,
-            joke: "Chuck Norris uses ribbed condoms inside out, so he gets the pleasure.",
-            categories: [
-            "explicit"
-            ]
-            },
             {
             id: 2,
             joke: "MacGyver can build an airplane out of gum and paper clips. Chuck Norris can kill him and take it.",
@@ -38,13 +99,6 @@ export class DavesDataService {
             categories: [ ]
             },
             {
-            id: 5,
-            joke: "Chuck Norris lost his virginity before his dad did.",
-            categories: [
-            "explicit"
-            ]
-            },
-            {
             id: 6,
             joke: "Since 1940, the year Chuck Norris was born, roundhouse kick related deaths have increased 13,000 percent.",
             categories: [ ]
@@ -53,13 +107,6 @@ export class DavesDataService {
             id: 12,
             joke: "Chuck Norris sheds his skin twice a year.",
             categories: [ ]
-            },
-            {
-            id: 13,
-            joke: "Chuck Norris once challenged Lance Armstrong in a &quot;Who has more testicles?&quot; contest. Chuck Norris won by 5.",
-            categories: [
-            "explicit"
-            ]
             },
             {
             id: 14,
@@ -75,13 +122,6 @@ export class DavesDataService {
             id: 16,
             joke: "Pluto is actually an orbiting group of British soldiers from the American Revolution who entered space after the Chuck gave them a roundhouse kick to the face.",
             categories: [ ]
-            },
-            {
-            id: 17,
-            joke: "Chuck Norris does not teabag the ladies. He potato-sacks them.",
-            categories: [
-            "explicit"
-            ]
             },
             {
             id: 18,
@@ -220,13 +260,6 @@ export class DavesDataService {
             categories: [ ]
             },
             {
-            id: 46,
-            joke: "Chuck Norris once ate three 72 oz. steaks in one hour. He spent the first 45 minutes having sex with his waitress.",
-            categories: [
-            "explicit"
-            ]
-            },
-            {
             id: 47,
             joke: "There is no theory of evolution, just a list of creatures Chuck Norris allows to live.",
             categories: [ ]
@@ -339,13 +372,6 @@ export class DavesDataService {
             categories: [ ]
             },
             {
-            id: 71,
-            joke: "When Chuck Norris has sex with a man, it won't be because he is gay. It will be because he has run out of women.",
-            categories: [
-            "explicit"
-            ]
-            },
-            {
             id: 72,
             joke: "How much wood would a woodchuck chuck if a woodchuck could Chuck Norris? All of it.",
             categories: [ ]
@@ -424,13 +450,6 @@ export class DavesDataService {
             id: 88,
             joke: "Chuck Norris doesnt shave; he kicks himself in the face. The only thing that can cut Chuck Norris is Chuck Norris.",
             categories: [ ]
-            },
-            {
-            id: 89,
-            joke: "For some, the left testicle is larger than the right one. For Chuck Norris, each testicle is larger than the other one.",
-            categories: [
-            "explicit"
-            ]
             },
             {
             id: 90,
@@ -1098,13 +1117,6 @@ export class DavesDataService {
             categories: [ ]
             },
             {
-            id: 229,
-            joke: "One day Chuck Norris walked down the street with a massive erection. There were no survivors.",
-            categories: [
-            "explicit"
-            ]
-            },
-            {
             id: 230,
             joke: "Chuck Norris built a time machine and went back in time to stop the JFK assassination. As Oswald shot, Chuck met all three bullets with his beard, deflecting them. JFK's head exploded out of sheer amazement.",
             categories: [ ]
@@ -1408,13 +1420,6 @@ export class DavesDataService {
             id: 292,
             joke: "If you were somehow able to land a punch on Chuck Norris your entire arm would shatter upon impact. This is only in theory, since, come on, who in their right mind would try this?",
             categories: [ ]
-            },
-            {
-            id: 293,
-            joke: "70% of a human's weight is water. 70% of Chuck Norris' weight is his dick.",
-            categories: [
-            "explicit"
-            ]
             },
             {
             id: 294,
@@ -1935,13 +1940,6 @@ export class DavesDataService {
             id: 399,
             joke: "In the movie &quot;The Matrix&quot;, Chuck Norris is the Matrix. If you pay close attention in the green &quot;falling code&quot; scenes, you can make out the faint texture of his beard.",
             categories: [ ]
-            },
-            {
-            id: 400,
-            joke: "Chuck Norris' dick is so big, it has it's own dick, and that dick is still bigger than yours.",
-            categories: [
-            "explicit"
-            ]
             },
             {
             id: 401,
@@ -2827,24 +2825,10 @@ export class DavesDataService {
             ]
             },
             {
-            id: 553,
-            joke: "China lets Chuck Norris search for porn on Google.",
-            categories: [
-            "explicit"
-            ]
-            },
-            {
             id: 554,
             joke: "Chuck Norris can install a 64 bit OS on 32 bit machines.",
             categories: [
             "nerdy"
-            ]
-            },
-            {
-            id: 555,
-            joke: "Chuck Norris doesn't have pubic hairs because hair doesn't grow on balls of steal.",
-            categories: [
-            "explicit"
             ]
             },
             {

@@ -1,0 +1,15 @@
+.movie-container {
+    width: 60%;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #4054B2;
+    color: white;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}

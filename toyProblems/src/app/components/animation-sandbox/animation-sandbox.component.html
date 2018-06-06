@@ -1,0 +1,24 @@
+<mat-card class="movie-container">
+    <div style="display: flex; flex-direction: row; justify-content: space-between;">
+        <mat-form-field style="min-width: 80%;">
+            <input matInput placeholder="Add to your favorite movie list" [(ngModel)]="currentMovie">
+        </mat-form-field>
+        <button mat-raised-button color="accent" style="height: 50px;" (click)="addMovie()">Add</button>
+    </div>
+
+    <div>
+        <h3>Movie List:</h3>
+        <div *ngFor="let movie of movieList; let i = index;">
+            <div style="display: flex; flex-direction: row; justify-content: space-between;">
+                <div>{{movie}}</div>
+                <mat-icon (click)="deleteMovie(i)">delete</mat-icon>
+            </div>
+        </div>
+    </div>
+</mat-card>
+
+<div style="padding: 25px; text-align: center;">
+    <div class="box">
+        <p style="margin: auto;">Move Me!</p>
+    </div>
+</div>
