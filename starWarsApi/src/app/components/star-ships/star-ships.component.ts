@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {StarwarsService} from '../../services/starwars.service';
+import { StarwarsService } from '../../services/starwars.service';
 
 @Component({
   selector: 'app-star-ships',
