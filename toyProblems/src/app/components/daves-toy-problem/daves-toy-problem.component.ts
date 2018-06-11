@@ -15,6 +15,7 @@ export class DavesToyProblemComponent implements OnInit {
     jokes: Joke[];
     shoppingList: {id: string, productId: string, volume: number}[];
     products: {id: string, price: number, img: string}[];
+    shoppingListComplete = [];
 
     constructor(
         private davesDataService: DavesDataService
@@ -32,8 +33,10 @@ export class DavesToyProblemComponent implements OnInit {
 
         // #1 Reverse 'reverseThisWord' and console long the result
 
+
         // #2 Console log the 1st, 3rd, 5th, 7th, etc letters after they have been
         // combined into a single string
+
 
         // #3 Console log all multiples of 5, 7, and 8.
 
@@ -47,11 +50,21 @@ export class DavesToyProblemComponent implements OnInit {
 
         // #8 In the same order as the shopping list, display the product which has
         // an id that matches the productId in the shopping list. The HTML should
-        // display the product id, total price, and image. 
+        // display the product id, total price, and image.
 
         // this.reverseString(this.reverseThisWord);
         // this.displayOddChars(this.reverseThisWord);
         // this.returnJokes(this.jokes);
+
+        this.shoppingList.forEach(listItem => {
+          this.products.forEach(product => {
+            if(product.id === listItem.productId) {
+              product.price = +(product.price * listItem.volume).toFixed(2);
+              this.shoppingListComplete.push(product);
+            }
+          });
+        });
+        console.log(this.shoppingListComplete);
     }
 
     reverseString(word: string) {

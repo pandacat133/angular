@@ -1,3 +1,7 @@
-<p>
-  daves-toy-problem works!
-</p>
+<div *ngFor="let listItem of shoppingListComplete">
+  <mat-card class="cardContainer">
+    <img [src]="listItem.img" style="max-width: 200px">
+    <div>{{listItem.id}}</div>
+    <div>{{listItem.price | currency:'USD':true:'1.2-2'}}</div>
+  </mat-card>
+</div>
