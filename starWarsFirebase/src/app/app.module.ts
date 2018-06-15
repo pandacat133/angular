@@ -11,7 +11,7 @@ import { MaterialModule } from './material.module';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
-import { environment } from '../environments/environment';
+import {environment} from '../environments/environment';
 
 import { CharacterListComponent } from './components/character-list/character-list.component';
 import { CharacterService } from './services/character.service';
@@ -19,7 +19,6 @@ import { CharacterDetailComponent } from './components/character-detail/characte
 import { ForceStrengthComponent } from './components/force-strength/force-strength.component';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
-
 
 @NgModule({
     declarations: [

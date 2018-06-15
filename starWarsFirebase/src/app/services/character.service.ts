@@ -16,18 +16,22 @@ export class CharacterService {
     ) { }
 
     getCharacters(): Observable<Character[]> {
-        return this.http.get<Character[]>('assets/api/characters.json');
-    }
-
-    getFilmName(url: string): Observable<any> {
-        console.log(url);
-        return this.http.get(url);
+        // return this.http.get<Character[]>('assets/api/characters.json');
+        return this.fb.list<Character>('characters').snapshotChanges().pipe(map(
+          characters => {
+            return characters.map(character => {
+              const data: Character = character.payload.val();
+              const fbid: string = character.key;
+              return { fbid, ...data};
+            });
+          }
+        ));
     }
 
     getCharacter(id: string): Observable<Character> {
-      return this.getCharacters().pipe(map((characters: Character[]) => {
-        return characters.find((character: Character) => character.id == id)
-      }));
+      // return this.getCharacters().pipe(map((characters: Character[]) => {
+      //   return characters.find((character: Character) => character.id == id)
+      // }));
+      return this.fb.object(`characters/${id}`).valueChanges();
     }
-
 }
